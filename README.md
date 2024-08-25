@@ -48,27 +48,34 @@ This project contains automated test scripts using Selenium WebDriver to verify 
    git clone https://github.com/Suraj-800/TestProject.git
    cd TestProject
 
-## Running TestNG Tests
+## Running the TestNG XML Suite
 
-### Running Tests in Eclipse
+### Running Tests with TestNG XML Suite
 
-To run the TestNG tests using the Eclipse IDE, follow these steps:
+To execute all your tests defined in the TestNG XML suite, follow these steps:
 
-1. **Open the Project**: 
-   - Please make sure that your project is imported into Eclipse.
+1. **Locate the TestNG XML File**:
+   - In your project directory, locate the TestNG XML suite file, typically named `testng.xml`.
 
-2. **Locate the Test Class**: 
-   - Navigate to the `src` folder and locate the test class you want to run. For example, the `LoginTest` class can be found under `src/TestPage/LoginTest.java`.
+2. **Run the Test Suite**:
+   - Right-click on the `testng.xml` file.
+   - Select **Run As** > **TestNG Suite**.
+   - This will execute all the tests defined in the XML file according to the suite configuration.
 
-3. **Run the Test**:
-   - Right-click on the test class (e.g., `LoginTest.java`).
-   - Select **Run As** > **TestNG Test**.
-   - The test will execute, and the results will be displayed in the TestNG view of the Eclipse IDE.
+3. **Updating the Project**:
+   - After the test suite has completed, go to the **Project Explorer**.
+   - Right-click on your project name.
+   - Select **Maven** > **Update Project** (or simply **Refresh** if you're not using Maven).
+   - This will refresh the project structure and show newly generated files.
 
-4. **View the Results**:
-   - After the tests have been completed, you can view the results in the TestNG panel, which shows the status of each test (e.g., Passed, Failed, Skipped).
-   - Detailed logs and any assertion failures will also be available in the Eclipse console.
+4. **Viewing the Test Reports**:
+   - After refreshing, a new folder (usually named `test-output`) will appear in your project directory.
+   - Inside this folder, you can find various reports that summarize the test execution results.
+     - **emailable-report.html**: A simple, easy-to-read report summarizing the results of the test suite.
+     - **index.html**: A more detailed report with information on individual test cases, including which tests passed, failed, or were skipped.
+   - To view these reports, right-click on the file (e.g., `index.html`) and select **Open With** > **Web Browser**.
 
+These reports provide a comprehensive overview of the test execution, allowing you to analyze the outcomes of each test case.
 
 
    
